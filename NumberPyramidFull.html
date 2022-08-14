@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+
+document.write("<pre>")
+
+for(i=1; i<=5; i++){
+	// tabs
+	for(j=i;j<=5-j;j--){
+		document.write("\t")		
+	}
+	
+	// Opposite greater to lower
+	for(j=5; j>=i; j-- ){
+		document.write(j + "\t")		
+	}
+		//  lower to greater
+	for(j=2; j<=6-i; j++ ){
+		document.write(j + "\t")		
+	}
+	document.write("<br/> <br/>")
+}
+document.write("</pre>")
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+
+
+<script>
+
+var n = Number(prompt("How many numbers you want to enter",""))
+document.write("We compared ")
+for(i=1; i<=n; i++){
+	
+	if(i==1){
+		input = mx = mn = Number(prompt("Enter your number",""))
+				
+	}
+	else{
+		input = temp = Number(prompt("Enter your number",""))
+		mx = Math.max(mx,temp)
+		mn = Math.min(mn,temp)
+	}
+	
+	document.write(input + ", ")
+			
+}
+document.write(" and found out <br> the Maximum number is " + mx + ", and <br> Minimum number is " + mn + ".")
+</script>
+
+
+
+</body>
+</html>

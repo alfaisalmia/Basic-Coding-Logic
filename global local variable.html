@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Global and Local Variable</title>
+</head>
+
+<body>
+
+
+<!--
+
+<script>
+
+	var price = 100;
+	function calc(){
+			window.total = price + 200;
+			total = total + 20		
+		}
+	calc();
+	alert(total);
+	
+</script>
+
+
+
+
+
+-->
+<script>
+
+	var price = 100;
+	function calc(){
+			var total = price + 200;
+			total = total + 20;
+			alert(total);
+		}
+	calc();
+	
+	
+</script>
+
+
+
+
+</body>
+</html>

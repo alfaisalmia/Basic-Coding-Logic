@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	var n = parseInt(prompt("How many numbers you want to check: ", ""));
+	
+	var maxnumber = minnumber = parseInt(prompt("Enter Numbers: ", ""));
+	for(i=1; i<n; i++){
+		var temporary = parseInt(prompt("Enter Numbers: ", ""));
+		maxnumber = Math.max(maxnumber, temporary);
+		minnumber = Math.min(minnumber, temporary);
+	}
+	document.write("Max Number is: " + maxnumber + "<br /> And Min Number is: " +  minnumber);
+</script>
+</body>
+</html>

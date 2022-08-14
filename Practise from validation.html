@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+	function Torikul(){
+		var msg = "";
+		var fn = document.getElementById("fullname").value;
+		var email = document.getElementById("email").value;
+		var p1 = document.getElementById("password1").value;
+		var p2 = document.getElementById("password2").value;
+		var g1 = document.getElementById("gen1").checked;
+		var g2 = document.getElementById("gen2").checked;
+		var addr = document.getElementById("addr").value;
+		var cnt = document.getElementById("cnt").selectedIndex;
+		
+		if(fn == ""){
+			msg = msg + "Full Name Required\n";
+			}
+		if(email == ""){
+			msg = msg + "Email Required\n";
+			}
+		if(p1 == ""){
+			msg = msg + "Password Required\n";
+			}
+		else if(p2 == ""){
+			msg = msg + "Retype Password Required\n";
+			}	
+		else if(p1 != p2){
+			msg = msg + "Password not matched\n";
+			}
+		else if(p1.length <5){
+			msg = msg + "Password too short\n";
+			}
+		else if(p1.length >=12){
+			msg = msg + "Password too large\n";
+			}
+		if(g1==false && g2==false){
+			msg = msg + "Gender Required\n";
+			}
+		if(addr == ""){
+			msg = msg + "Address Required\n";
+			}	
+		else if(addr.length<10){
+			msg = msg + "Address too short\n";
+			}
+		else if(addr.length>30){
+			msg = msg + "Address too large\n";
+			}
+		if(cnt == 0){
+			msg = msg + "Please choose a Country\n";
+			}	
+						
+		if(msg == ""){
+			return true;
+			}
+		else{
+			alert(msg);
+			}	
+		
+	
+		return false;
+				}
+</script>
+</head>
+
+<body>
+
+<form action="abc.html" onSubmit="return Torikul()">
+<table width="500" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="116">Full Name</td>
+    <td width="358"><input type="text" id="fullname"></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input type="text" id="email"></td>
+  </tr>
+   <tr>
+    <td>Password</td>
+    <td><input type="password" id="password1" name="pass1"></td>
+  </tr>
+   <tr>
+    <td>Password</td>
+    <td><input type="password" id="password2" name="pass2"></td>
+  </tr>
+   <tr>
+    <td>Gender</td>
+    <td>
+    <input type="radio" id="gen1" name="gen" value="m">Male
+    <input type="radio" id="gen2" name="gen" value="f">Female
+    </td>
+  </tr>
+  <td>Address</td>
+    <td><textarea id="addr" name="addr"></textarea></td>
+  </tr>
+  <td>Country</td>
+    <td>
+    <select id="cnt" name="cnt">
+    	<option value="o">--- Select your Country ---</option>
+        <option value="1">Bangladesh</option>
+        <option value="2">USA</option>
+        <option value="3">UK</option>
+        <option value="4">Canada</option>
+    </select>
+    </td>
+   <tr> 
+    <td></td>
+    <td><input type="submit" value="Save" name="sub"</td></td>
+    </tr>
+  
+  
+</table>
+</form>
+
+</body>
+</html>

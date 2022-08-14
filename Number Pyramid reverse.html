@@ -1,0 +1,43 @@
+<!doctype html>
+<html>1
+<head>
+<meta charset="utf-8">
+<title>number pyramid 4</title>
+</head>
+<body>
+
+<script>
+
+document.write("<pre>") // it's used for TAB activity in JavaScript
+
+for(i=1; i<=5; i++){
+
+// Tabs start from here
+	for(j=i;j>=1;j--){
+		document.write("\t");	
+	}
+
+// 5 to 2 and down from here
+	for(j=6-i;j>=2;j-- ){
+		document.write(j + "\t");		
+	}
+
+// 1 to 5 and down from here 
+	for(j=1;j<=6-i;j++ ){
+		document.write(j + "\t");		
+	}
+	
+// line break from here  print
+	document.write("<br/> <br/>");
+}
+
+
+document.write("</pre>") // it's used for TAB functions...
+
+
+
+</script>
+
+
+</body>
+</html>

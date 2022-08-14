@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Leap Year</title>
+</head>
+<body>
+
+
+<script>
+
+
+function leapcal() {
+	var p = document.getElementById("price").value;
+	if ( y % 4 != 0){
+		document.write(year + " is not Leap Year")
+	}
+	else{
+		document.write(year + " is Leap Year")
+	}
+}
+
+
+
+	
+
+</script>
+
+
+Enter the Year
+<br>
+<input type="number" id="year" name="year" onClick="leapcal()">
+<input type="submit" id="submit" name="submit" onClick="leapcal()">
+
+</body>
+</html>

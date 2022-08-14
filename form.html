@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script>
+    	function ValidF(){
+			var err = 0;
+			var a = document.getElementById("name").value;
+				
+				if(a == ""){
+				err++;
+				document.getElementById("hridoy").innerHTML = "Required";
+				document.getElementById("name").style.border="1px solid red";
+			}
+			else{
+				document.getElementById("hridoy").innerHTML="";
+				document.getElementById("name").style.border="1px solid green";
+				
+				}	
+			if(err == 0){
+				return true;	
+			}
+			else{
+				return false;	
+			}
+		}
+	</script>
+
+
+
+</head>
+
+
+
+<body>
+	<form action="bac.html" onSubmit="return ValidF()">
+    	<table align="center" cellspacing="0" cellpading="5" border="1" width="25%">
+        	<tr>
+            	<td>Name:</td>
+                <td><input type="text" id="name">
+                	<span id="hridoy"></span>
+                </td>
+			</tr>
+        
+       		 <tr>
+            	<td></td>
+                <td><input type="submit" value="save"></td>
+			</tr>
+        
+        </table>
+    
+    
+    
+    </form>
+
+</body>
+</html>

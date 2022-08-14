@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+function Torikul(){
+	
+		
+	var n = document.getElementById("input").value;	
+	
+	
+	var sum = 0;
+	var oddsum = 0;
+	for(i=1; i<=n; i++){
+		if(i%2==0){
+		sum = sum + i;
+		}
+		else{
+			oddsum = oddsum + i;
+			}
+	}
+	
+	document.getElementById("sum").value=sum;
+	document.getElementById("oddsum").value=oddsum;
+	return false;
+	}
+	
+</script>
+
+<form action="abc.html" onsubmit="return Torikul()">
+	<table border="1" align="center" width="40%" cellpadding="5" cellspacing="5">
+    <tr>
+    	<td>Input Number</td>
+        <td><input type="text" name="id" id="input" placeholder="Input a Number" required="required"/></td>
+    </tr>
+	<tr>
+    	<td>Sum of Even Number</td>
+        <td><input type="text" name="id" id="sum" placeholder="See the result" /></td>
+    </tr>
+    <tr>
+    	<td>Sum of Odd Number</td>
+        <td><input type="text" name="name" id="oddsum" placeholder="See the result"/></td>
+    </tr>
+    <tr>
+    	<td>Submit</td>
+    	<td><input type="submit" value="Save"/></td>
+    </tr>
+      
+</table>
+</form>
+</body>
+</html>

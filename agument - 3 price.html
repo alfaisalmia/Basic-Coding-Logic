@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+
+
+<script>
+
+function Cal(price, vat, dis){
+	price = price - (price*dis)/100;
+	price = price + (price*vat)/100;
+	document.write("Total Price: " + price + "<br>");
+}
+
+Cal(100, 15, 10)
+Cal(200, 20, 20)
+Cal(100,20, 35)
+
+
+
+</script>
+
+
+</head>
+<body>
+</body>
+</html>

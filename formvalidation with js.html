@@ -1,0 +1,123 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<script>
+	function FormV(){
+		var err = 0;
+		var msg = "";
+		
+		//-----Getting value from our registration form-----
+		
+		var fn = document.getElementById("fn").value;
+		var em = document.getElementById("email").value;
+		var p1 = document.getElementById("pass1").value;
+		var p2 = document.getElementById("pass2").value;
+		var ag = document.getElementById("age").value;
+		var cnt = document.getElementById("cnt").selectedindex;
+		
+		//-----------Name Validation-------------------
+		if(fn == ""){
+			msg += ++err + ". Your Full Name is Required\n";//Longhand->(msg = msg + ++err + "Your Full name is Required \n)"
+}
+		else if(fn.length<=4){
+			msg += ++err + "Name too short should be 4 character minimum\n";//Honghand->(msg = msg + ++err + "Name too short should be 4 character\n)"
+		}
+//-----------Email Validation-------------------
+if (em == ""){
+	msg += ++err + " Email is Required\n"
+}
+//-------------Password Validation--------------
+if (p1 == ""){
+	msg += ++err + " Password Required \n"
+}		
+else if (p2 == ""){
+	msg += ++err + " Retype Your Password \n"	
+} 
+else if( p1 != p2){
+	msg += ++err + " Password Not Matched \n" 	
+}
+//--------------- Age Validation -----------
+if(ag == ""){
+	msg += ++err + "Age Required \n"	
+}
+else if(isNaN(ag)){
+	msg += ++err + "Age must be a number\n"	
+}
+else if(ag <=0){
+	msg	+= ++err +" Age should be Possitive Number \n"
+}
+
+else if( ag >= 130){
+	msg += ++ err + " Age should be below 131 \n"
+}
+//--------------Country Validation-------------
+
+if(cnt == 0){
+		msg += ++err + ". Country Required\n";	
+	}
+//--------------Final Error Message-------------
+		if(err == 0){
+			return true;
+		}
+		else{
+			("Total Error: " + err + "\n------\n" + msg);	
+		return false;
+		
+		}
+}
+
+	</script>
+<body>
+
+	<form action="hyper.html" method="get" onSubmit="return FormV()">
+<table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+  <tr>
+    <td>Full Name</td>
+    <td><input type="text" id="fn" />
+    	<script>document.write(msg);</script>
+    
+    </td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input type="text" id="email"></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" id="pass1"></td>
+  </tr>
+  <tr>
+    <td>Re-type Password</td>
+    <td><input type="password" id="pass2"></td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td><input type="text" id="age"></td>
+  </tr>
+  <tr>
+    <td>Country</td>
+    <td>
+    	<select name="cnt" id="cnt">
+        	<option>Choose Country</option>
+        	<option>BD</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select>
+    
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="submit" id="" value="Submit"></td>
+  </tr>
+</table>
+
+</form>
+
+
+</body>
+</html>
